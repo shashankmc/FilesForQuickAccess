@@ -20,5 +20,6 @@ local:myFip rdf:type fip:FIP-Declaration;
         sio:SIO_000628 <https://www.jvsoest.eu/cedar_dataset.json>;
     ];
     fip:declares-current-use-of [
-        sh:shapesGraph <https://raw.githubusercontent.com/MaastrichtU-CDS/EPND-FAIRification/main/management_webpage/shapeTest/shacl.ttl>;
+        #sh:shapesGraph <https://raw.githubusercontent.com/MaastrichtU-CDS/EPND-FAIRification/main/management_webpage/shapeTest/shacl.ttl>;
+	sh:shapesGraph <https://raw.githubusercontent.com/shashankmc/FilesForQuickAccess/main/EPNDCS1shacl.ttl>;
     ].
