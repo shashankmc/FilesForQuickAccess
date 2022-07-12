@@ -17,7 +17,8 @@ local:myFip rdf:type fip:FIP-Declaration;
     rdfs:label "EPND common data model";
     fip:declares-current-use-of [
         rdf:type <https://schema.metadatacenter.org/core/Template>;
-        sio:SIO_000628 <https://www.jvsoest.eu/cedar_dataset.json>;
+        #sio:SIO_000628 <https://www.jvsoest.eu/cedar_dataset.json>;
+	sio:SIO_000628 <https://raw.githubusercontent.com/MaastrichtU-CDS/EPND-FAIRification/main/fip/cedar_dataset.json>;
     ];
     fip:declares-current-use-of [
         #sh:shapesGraph <https://raw.githubusercontent.com/MaastrichtU-CDS/EPND-FAIRification/main/management_webpage/shapeTest/shacl.ttl>;
