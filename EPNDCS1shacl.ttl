@@ -1,5 +1,3 @@
-
-@prefix _: <http://example/#> .
 @prefix schema: <http://schema.org/> .
 @prefix dash: <http://datashapes.org/dash#> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
@@ -51,7 +49,7 @@ EPND:E4E4 rdfs:label "APOE allele E4E4".
 sio:SIO_000269 rdfs:label "true".
 sio:SIO_000270 rdfs:label "false".
 
-_:An_age_since_birth_measurement_datum_at_the_time_of_a_clinical_visit_Shape a sh:NodeShape, sio:SIO_000915; #numeric
+epnd:An_age_since_birth_measurement_datum_at_the_time_of_a_clinical_visit_Shape a sh:NodeShape, sio:SIO_000915; #numeric
                             sh:closed true;
                             sh:property [ 
                                 sh:path rdf:type; 
@@ -75,7 +73,7 @@ _:An_age_since_birth_measurement_datum_at_the_time_of_a_clinical_visit_Shape a s
                                 sh:maxInclusive 130.0;
                             ].                                            
 
-_:Demographics_Shape a sh:NodeShape;
+epnd:Demographics_Shape a sh:NodeShape;
                             sh:targetClass sty:T081; #quantitative concept
                             sh:property [
                                 sh:path rdf:type ;
@@ -83,11 +81,11 @@ _:Demographics_Shape a sh:NodeShape;
                             ];
                             sh:property [
                                 sh:path sio:SIO_000011; #is attribute of
-                                sh:node _:An_age_since_birth_measurement_datum_at_the_time_of_a_clinical_visit_Shape;
+                                sh:node epnd:An_age_since_birth_measurement_datum_at_the_time_of_a_clinical_visit_Shape;
                                 sh:minCount 1;            
                             ].
                             
-_:Age_when_biosample_was_taken__Shape a sh:NodeShape, sio:SIO_000915; #numeric
+epnd:Age_when_biosample_was_taken__Shape a sh:NodeShape, sio:SIO_000915; #numeric
                             sh:closed true;
                             sh:property [ 
                                 sh:path rdf:type; 
@@ -111,7 +109,7 @@ _:Age_when_biosample_was_taken__Shape a sh:NodeShape, sio:SIO_000915; #numeric
                                 sh:maxInclusive 130.0;
                             ].                                            
 
-_:Demographics_Shape a sh:NodeShape;
+epnd:Demographics_Shape a sh:NodeShape;
                             sh:targetClass sty:T081; #quantitative concept
                             sh:property [
                                 sh:path rdf:type ;
@@ -119,11 +117,11 @@ _:Demographics_Shape a sh:NodeShape;
                             ];
                             sh:property [
                                 sh:path sio:SIO_000011; #is attribute of
-                                sh:node _:Age_when_biosample_was_taken__Shape;
+                                sh:node epnd:Age_when_biosample_was_taken__Shape;
                                 sh:minCount 1;            
                             ].
                             
-_:Duration_of_formal_education_observable_entity_Shape a sh:NodeShape, sio:SIO_000915; #numeric
+epnd:Duration_of_formal_education_observable_entity_Shape a sh:NodeShape, sio:SIO_000915; #numeric
                             sh:closed true;
                             sh:property [ 
                                 sh:path rdf:type; 
@@ -147,7 +145,7 @@ _:Duration_of_formal_education_observable_entity_Shape a sh:NodeShape, sio:SIO_0
                                 sh:maxInclusive 130.0;
                             ].                                            
 
-_:Demographics_Shape a sh:NodeShape;
+epnd:Demographics_Shape a sh:NodeShape;
                             sh:targetClass sty:T081; #quantitative concept
                             sh:property [
                                 sh:path rdf:type ;
@@ -155,11 +153,11 @@ _:Demographics_Shape a sh:NodeShape;
                             ];
                             sh:property [
                                 sh:path sio:SIO_000011; #is attribute of
-                                sh:node _:Duration_of_formal_education_observable_entity_Shape;
+                                sh:node epnd:Duration_of_formal_education_observable_entity_Shape;
                                 sh:minCount 1;            
                             ].
                             
-_:Montreal_cognitive_assessment_score_Shape a sh:NodeShape, sio:SIO_000915; #numeric
+epnd:Montreal_cognitive_assessment_score_Shape a sh:NodeShape, sio:SIO_000915; #numeric
                             sh:closed true;
                             sh:property [ 
                                 sh:path rdf:type; 
@@ -183,7 +181,7 @@ _:Montreal_cognitive_assessment_score_Shape a sh:NodeShape, sio:SIO_000915; #num
                                 sh:maxInclusive 31.0;
                             ].                                            
 
-_:Cognition_Shape a sh:NodeShape;
+epnd:Cognition_Shape a sh:NodeShape;
                             sh:targetClass sty:T081; #quantitative concept
                             sh:property [
                                 sh:path rdf:type ;
@@ -191,11 +189,11 @@ _:Cognition_Shape a sh:NodeShape;
                             ];
                             sh:property [
                                 sh:path sio:SIO_000011; #is attribute of
-                                sh:node _:Montreal_cognitive_assessment_score_Shape;
+                                sh:node epnd:Montreal_cognitive_assessment_score_Shape;
                                 sh:minCount 1;            
                             ].
                             
-_:Mini_Mental_State_Examination_Shape a sh:NodeShape, sio:SIO_000915; #numeric
+epnd:Mini_Mental_State_Examination_Shape a sh:NodeShape, sio:SIO_000915; #numeric
                             sh:closed true;
                             sh:property [ 
                                 sh:path rdf:type; 
@@ -219,7 +217,7 @@ _:Mini_Mental_State_Examination_Shape a sh:NodeShape, sio:SIO_000915; #numeric
                                 sh:maxInclusive 31.0;
                             ].                                            
 
-_:Cognition_Shape a sh:NodeShape;
+epnd:Cognition_Shape a sh:NodeShape;
                             sh:targetClass sty:T081; #quantitative concept
                             sh:property [
                                 sh:path rdf:type ;
@@ -227,11 +225,11 @@ _:Cognition_Shape a sh:NodeShape;
                             ];
                             sh:property [
                                 sh:path sio:SIO_000011; #is attribute of
-                                sh:node _:Mini_Mental_State_Examination_Shape;
+                                sh:node epnd:Mini_Mental_State_Examination_Shape;
                                 sh:minCount 1;            
                             ].
                             
-_:Memory_assessment_Shape a sh:NodeShape, sio:SIO_000915; #numeric
+epnd:Memory_assessment_Shape a sh:NodeShape, sio:SIO_000915; #numeric
                             sh:closed true;
                             sh:property [ 
                                 sh:path rdf:type; 
@@ -247,7 +245,7 @@ _:Memory_assessment_Shape a sh:NodeShape, sio:SIO_000915; #numeric
                                 sh:minInclusive 0.0; 
                             ].                                            
 
-_:Cognition_Shape a sh:NodeShape;
+epnd:Cognition_Shape a sh:NodeShape;
                             sh:targetClass sty:T081; #quantitative concept
                             sh:property [
                                 sh:path rdf:type ;
@@ -255,11 +253,11 @@ _:Cognition_Shape a sh:NodeShape;
                             ];
                             sh:property [
                                 sh:path sio:SIO_000011; #is attribute of
-                                sh:node _:Memory_assessment_Shape;
+                                sh:node epnd:Memory_assessment_Shape;
                                 sh:minCount 1;            
                             ].
                             
-_:Raw_score_of_memory_assessment_Shape a sh:NodeShape, sio:SIO_000915; #numeric
+epnd:Raw_score_of_memory_assessment_Shape a sh:NodeShape, sio:SIO_000915; #numeric
                             sh:closed true;
                             sh:property [ 
                                 sh:path rdf:type; 
@@ -275,7 +273,7 @@ _:Raw_score_of_memory_assessment_Shape a sh:NodeShape, sio:SIO_000915; #numeric
                                 sh:minInclusive 0.0; 
                             ].                                            
 
-_:Cognition_Shape a sh:NodeShape;
+epnd:Cognition_Shape a sh:NodeShape;
                             sh:targetClass sty:T081; #quantitative concept
                             sh:property [
                                 sh:path rdf:type ;
@@ -283,11 +281,11 @@ _:Cognition_Shape a sh:NodeShape;
                             ];
                             sh:property [
                                 sh:path sio:SIO_000011; #is attribute of
-                                sh:node _:Raw_score_of_memory_assessment_Shape;
+                                sh:node epnd:Raw_score_of_memory_assessment_Shape;
                                 sh:minCount 1;            
                             ].
                             
-_:Motor_assessment_scale_score_Shape a sh:NodeShape, sio:SIO_000915; #numeric
+epnd:Motor_assessment_scale_score_Shape a sh:NodeShape, sio:SIO_000915; #numeric
                             sh:closed true;
                             sh:property [ 
                                 sh:path rdf:type; 
@@ -303,7 +301,7 @@ _:Motor_assessment_scale_score_Shape a sh:NodeShape, sio:SIO_000915; #numeric
                                 sh:minInclusive 0.0; 
                             ].                                            
 
-_:Motor_function_Shape a sh:NodeShape;
+epnd:Motor_function_Shape a sh:NodeShape;
                             sh:targetClass sty:T081; #quantitative concept
                             sh:property [
                                 sh:path rdf:type ;
@@ -311,11 +309,11 @@ _:Motor_function_Shape a sh:NodeShape;
                             ];
                             sh:property [
                                 sh:path sio:SIO_000011; #is attribute of
-                                sh:node _:Motor_assessment_scale_score_Shape;
+                                sh:node epnd:Motor_assessment_scale_score_Shape;
                                 sh:minCount 1;            
                             ].
                             
-_:Date_of_clinical_diagnosis_Shape a sh:NodeShape, sio:SIO_000418; #time instant
+epnd:Date_of_clinical_diagnosis_Shape a sh:NodeShape, sio:SIO_000418; #time instant
                             sh:closed true;
                             sh:targetClass EPND:ClinicalDiagnosisDate;
                             sh:property [ 
@@ -324,10 +322,10 @@ _:Date_of_clinical_diagnosis_Shape a sh:NodeShape, sio:SIO_000418; #time instant
                             ];
                             sh:property [ 
                                 sh:path sio:SIO_000221; #has unit
-                                sh:node _:dateFormat;
+                                sh:node epnd:dateFormat;
                             ].                                               
 
-_:dateFormat a sh:NodeShape;
+epnd:dateFormat a sh:NodeShape;
                 sh:targetClass schema:Date; #date in ISO 8601 date format
                 sh:closed true;
                 sh:property [
@@ -340,7 +338,7 @@ _:dateFormat a sh:NodeShape;
                     skos:altLabel 'date YYYY-MM-DD';
                 ].
 
-_:DiagnosisShape a sh:NodeShape;
+epnd:DiagnosisShape a sh:NodeShape;
                             sh:targetClass sty:T079; #temporal concept
                             sh:property [
                                 sh:path rdf:type ;
@@ -348,11 +346,11 @@ _:DiagnosisShape a sh:NodeShape;
                             ];
                             sh:property [
                                 sh:path sio:SIO_000011; #is attribute of
-                                sh:node _:Date_of_clinical_diagnosis_Shape;
+                                sh:node epnd:Date_of_clinical_diagnosis_Shape;
                                 sh:minCount 1;
                             ].            
                     
-_:Date_of_procedure_observable_entity_Shape a sh:NodeShape, sio:SIO_000418; #time instant
+epnd:Date_of_procedure_observable_entity_Shape a sh:NodeShape, sio:SIO_000418; #time instant
                             sh:closed true;
                             sh:targetClass snomed:439272007;
                             sh:property [ 
@@ -361,10 +359,10 @@ _:Date_of_procedure_observable_entity_Shape a sh:NodeShape, sio:SIO_000418; #tim
                             ];
                             sh:property [ 
                                 sh:path sio:SIO_000221; #has unit
-                                sh:node _:dateFormat;
+                                sh:node epnd:dateFormat;
                             ].                                               
 
-_:dateFormat a sh:NodeShape;
+epnd:dateFormat a sh:NodeShape;
                 sh:targetClass schema:Date; #date in ISO 8601 date format
                 sh:closed true;
                 sh:property [
@@ -377,7 +375,7 @@ _:dateFormat a sh:NodeShape;
                     skos:altLabel 'date YYYY-MM-DD';
                 ].
 
-_:CognitionShape a sh:NodeShape;
+epnd:CognitionShape a sh:NodeShape;
                             sh:targetClass sty:T079; #temporal concept
                             sh:property [
                                 sh:path rdf:type ;
@@ -385,11 +383,11 @@ _:CognitionShape a sh:NodeShape;
                             ];
                             sh:property [
                                 sh:path sio:SIO_000011; #is attribute of
-                                sh:node _:Date_of_procedure_observable_entity_Shape;
+                                sh:node epnd:Date_of_procedure_observable_entity_Shape;
                                 sh:minCount 1;
                             ].            
                     
-_:collection_date__Shape a sh:NodeShape, sio:SIO_000418; #time instant
+epnd:collection_date__Shape a sh:NodeShape, sio:SIO_000418; #time instant
                             sh:closed true;
                             sh:targetClass LNC:MTHU015751;
                             sh:property [ 
@@ -398,10 +396,10 @@ _:collection_date__Shape a sh:NodeShape, sio:SIO_000418; #time instant
                             ];
                             sh:property [ 
                                 sh:path sio:SIO_000221; #has unit
-                                sh:node _:dateFormat;
+                                sh:node epnd:dateFormat;
                             ].                                               
 
-_:dateFormat a sh:NodeShape;
+epnd:dateFormat a sh:NodeShape;
                 sh:targetClass schema:Date; #date in ISO 8601 date format
                 sh:closed true;
                 sh:property [
@@ -414,7 +412,7 @@ _:dateFormat a sh:NodeShape;
                     skos:altLabel 'date YYYY-MM-DD';
                 ].
 
-_:Sample_related_infoShape a sh:NodeShape;
+epnd:Sample_related_infoShape a sh:NodeShape;
                             sh:targetClass sty:T079; #temporal concept
                             sh:property [
                                 sh:path rdf:type ;
@@ -422,12 +420,12 @@ _:Sample_related_infoShape a sh:NodeShape;
                             ];
                             sh:property [
                                 sh:path sio:SIO_000011; #is attribute of
-                                sh:node _:collection_date__Shape;
+                                sh:node epnd:collection_date__Shape;
                                 sh:minCount 1;
                             ].            
                     
  
-_:Finding_related_to_biological_sex_Shape  a   sh:NodeShape, sio:SIO_000137; #category
+epnd:Finding_related_to_biological_sex_Shape  a   sh:NodeShape, sio:SIO_000137; #category
                                 sh:closed true;
                                 sh:targetClass snomed:429019009;
                                 sh:xone 
@@ -479,7 +477,7 @@ _:Finding_related_to_biological_sex_Shape  a   sh:NodeShape, sio:SIO_000137; #ca
                                     sh:minCount 2; # columnClass and valueClass combination 
                                 ].
                                                
-_:DemographicsShape a sh:NodeShape;
+epnd:DemographicsShape a sh:NodeShape;
                         sh:targetClass sty:T080; #qualitative concept
                         sh:property [
                             sh:path rdf:type ;
@@ -487,12 +485,12 @@ _:DemographicsShape a sh:NodeShape;
                         ];
                         sh:property [
                             sh:path sio:SIO_000137; #is attribute of
-                            sh:node _:Finding_related_to_biological_sex_Shape;
+                            sh:node epnd:Finding_related_to_biological_sex_Shape;
                             sh:minCount 1;  
                         ].
                                 
  
-_:Diagnosis_of_cognitive_performance_function_Shape  a   sh:NodeShape, sio:SIO_000137; #category
+epnd:Diagnosis_of_cognitive_performance_function_Shape  a   sh:NodeShape, sio:SIO_000137; #category
                                 sh:closed true;
                                 sh:targetClass EPND:ClinicalDiagnosis ;
                                 sh:xone 
@@ -544,7 +542,7 @@ _:Diagnosis_of_cognitive_performance_function_Shape  a   sh:NodeShape, sio:SIO_0
                                     sh:minCount 2; # columnClass and valueClass combination 
                                 ].
                                                
-_:DiagnosisShape a sh:NodeShape;
+epnd:DiagnosisShape a sh:NodeShape;
                         sh:targetClass sty:T080; #qualitative concept
                         sh:property [
                             sh:path rdf:type ;
@@ -552,12 +550,12 @@ _:DiagnosisShape a sh:NodeShape;
                         ];
                         sh:property [
                             sh:path sio:SIO_000137; #is attribute of
-                            sh:node _:Diagnosis_of_cognitive_performance_function_Shape;
+                            sh:node epnd:Diagnosis_of_cognitive_performance_function_Shape;
                             sh:minCount 1;  
                         ].
                                 
  
-_:Type_of_dementia_diagnosis_Shape  a   sh:NodeShape, sio:SIO_000137; #category
+epnd:Type_of_dementia_diagnosis_Shape  a   sh:NodeShape, sio:SIO_000137; #category
                                 sh:closed true;
                                 sh:targetClass EPND:ClinicalDementiaDiagnosis;
                                 sh:xone 
@@ -609,7 +607,7 @@ _:Type_of_dementia_diagnosis_Shape  a   sh:NodeShape, sio:SIO_000137; #category
                                     sh:minCount 2; # columnClass and valueClass combination 
                                 ].
                                                
-_:DiagnosisShape a sh:NodeShape;
+epnd:DiagnosisShape a sh:NodeShape;
                         sh:targetClass sty:T080; #qualitative concept
                         sh:property [
                             sh:path rdf:type ;
@@ -617,12 +615,12 @@ _:DiagnosisShape a sh:NodeShape;
                         ];
                         sh:property [
                             sh:path sio:SIO_000137; #is attribute of
-                            sh:node _:Type_of_dementia_diagnosis_Shape;
+                            sh:node epnd:Type_of_dementia_diagnosis_Shape;
                             sh:minCount 1;  
                         ].
                                 
  
-_:Staging_according_to_a_combination_of_amyloid_pathology_and_cognitive_impairment_Shape  a   sh:NodeShape, sio:SIO_000137; #category
+epnd:Staging_according_to_a_combination_of_amyloid_pathology_and_cognitive_impairment_Shape  a   sh:NodeShape, sio:SIO_000137; #category
                                 sh:closed true;
                                 sh:targetClass EPND:ADDiseaseStaging;
                                 sh:xone 
@@ -674,7 +672,7 @@ _:Staging_according_to_a_combination_of_amyloid_pathology_and_cognitive_impairme
                                     sh:minCount 2; # columnClass and valueClass combination 
                                 ].
                                                
-_:DiagnosisShape a sh:NodeShape;
+epnd:DiagnosisShape a sh:NodeShape;
                         sh:targetClass sty:T080; #qualitative concept
                         sh:property [
                             sh:path rdf:type ;
@@ -682,12 +680,12 @@ _:DiagnosisShape a sh:NodeShape;
                         ];
                         sh:property [
                             sh:path sio:SIO_000137; #is attribute of
-                            sh:node _:Staging_according_to_a_combination_of_amyloid_pathology_and_cognitive_impairment_Shape;
+                            sh:node epnd:Staging_according_to_a_combination_of_amyloid_pathology_and_cognitive_impairment_Shape;
                             sh:minCount 1;  
                         ].
                                 
  
-_:APOE_genotype_category_Shape  a   sh:NodeShape, sio:SIO_000137; #category
+epnd:APOE_genotype_category_Shape  a   sh:NodeShape, sio:SIO_000137; #category
                                 sh:closed true;
                                 sh:targetClass ncbi:25728;
                                 sh:xone 
@@ -778,7 +776,7 @@ _:APOE_genotype_category_Shape  a   sh:NodeShape, sio:SIO_000137; #category
                                     sh:minCount 2; # columnClass and valueClass combination 
                                 ].
                                                
-_:GeneticsShape a sh:NodeShape;
+epnd:GeneticsShape a sh:NodeShape;
                         sh:targetClass sty:T080; #qualitative concept
                         sh:property [
                             sh:path rdf:type ;
@@ -786,7 +784,7 @@ _:GeneticsShape a sh:NodeShape;
                         ];
                         sh:property [
                             sh:path sio:SIO_000137; #is attribute of
-                            sh:node _:APOE_genotype_category_Shape;
+                            sh:node epnd:APOE_genotype_category_Shape;
                             sh:minCount 1;  
                         ].
                                 
