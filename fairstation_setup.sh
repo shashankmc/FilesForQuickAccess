@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 # Need to pass 1 argument, either sudo or blank
+# Before running the script, make it executable chmod +x command
 # method to download and setup environment
 env_setup(){
 	$1 apt update && $1 apt install git docker
