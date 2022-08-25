@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# Need to pass 1 argument, either sudo or blank
+# Need to pass 2 arguments, either sudo or blank and ubuntu or blank (This isn't tested, I assume it isn't going to be ambiguous)
 # Before running the script, make it executable chmod +x command
 # method to download and setup environment
 ubuntu_env_setup(){
