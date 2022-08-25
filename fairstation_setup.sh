@@ -1,20 +1,19 @@
 #!/usr/bin/env sh
-# Need to pass 2 arguments, either sudo or blank and ubuntu or blank (This isn't tested, I assume it isn't going to be ambiguous)
 # Before running the script, make it executable chmod +x command
 # method to download and setup environment
 ubuntu_env_setup(){
-	$1 apt update && $1 apt install apt-transport-https git ca-certificates curl gnupg lsb-release -y 
-	$1 mkdir -p /etc/apt/keyrings 
-	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | $1 gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-	echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | $1 tee /etc/apt/sources.list.d/docker.list > /dev/null
-	$1 apt update
-	$1 apt install docker-ce docker-ce-cli containerd.io docker-compose-p -y
-	# $1 usermod -aG docker $USER -- if permission becomes an issue
+	sudo apt update && sudo apt install apt-transport-https git ca-certificates curl gnupg lsb-release -y 
+	sudo mkdir -p /etc/apt/keyrings 
+	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+	echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+	sudo apt update
+	sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-p -y
+	# sudo usermod -aG docker $USER -- if permission becomes an issue
 	# If this docker install fails, can install docker compose through pip. Using the latest version, hopefully does not break anything else.
-	$1 curl -L https://github.com/docker/compose/releases/download/v2.10.0/docker-compose-linux-x86_64  -o /usr/local/bin/docker-compose
-	$1 chmod +x /usr/local/bin/docker-compose
-	$1 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-	$1 service docker start
+	sudo curl -L https://github.com/docker/compose/releases/download/v2.10.0/docker-compose-linux-x86_64  -o /usr/local/bin/docker-compose
+	sudo chmod +x /usr/local/bin/docker-compose
+	sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+	sudo service docker start
 	docker-compose --version
 }
 
@@ -66,20 +65,10 @@ repo_setup(){
 	printf "AIRFLOW_VAR_LC_PASSWORD=hashed_password_here" >> .env
 }
 
-if [ "$1" == "sudo" ]
-then
-	echo "Running the process as $1"
-else
-	echo "Running the process as normal user"
-fi
-
+echo "Running the process as sudo"
 echo "Setting up the environment"
-if [ "$2" == "ubuntu" ]
-then
-	ubuntu_env_setup
-else
-	redhat_env_setup
-fi
+# ubuntu_env_setup
+redhat_env_setup
 
 echo "Downloading the repo and creating the environment file for airflow"
 repo_setup
