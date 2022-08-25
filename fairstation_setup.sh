@@ -2,7 +2,7 @@
 # Need to pass 1 argument, either sudo or blank
 # Before running the script, make it executable chmod +x command
 # method to download and setup environment
-env_setup(){
+ubuntu_env_setup(){
 	$1 apt update && $1 apt install apt-transport-https git ca-certificates curl gnupg lsb-release -y 
 	$1 mkdir -p /etc/apt/keyrings 
 	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | $1 gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -16,6 +16,22 @@ env_setup(){
 	$1 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 	$1 service docker start
 	docker-compose --version
+}
+redhat_env_setup(){
+	$1 yum update && $1 yum install -y yum-utils git curl wget #device-mapper-persistent-data lvm2
+	$1 yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+	$1 yum update && $1 yum install -y docker-ce docker-ce-cli containerd.io 
+	# $1 yum install docker-ce --allowerasing # if dependency issues with podman
+	$1 systemctl enable --now docker
+	systemctl status docker
+	$1 usermod -aG docker $USER
+	newgrp docker
+	id $USER
+	docker version
+	curl -s https://api.github.com/repos/docker/compose/releases/latest | grep browser_download_url  | grep docker-compose-linux-x86_64 | cut -d '"' -f 4 | wget -qi -
+	chmod +x docker-compose-linux-x86_64
+	$1 mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
+	docker-compose version
 }
 docker_setup(){
 	$1 docker-compose up -d --quiet-pull
@@ -40,7 +56,12 @@ else
 	echo "Running the process as normal user"
 fi
 echo "Setting up the environment"
-env_setup
+if [ "$2" == "ubuntu" ]
+then
+	ubuntu_env_setup
+else
+	redhat_env_setup
+fi
 echo "Downloading the repo and creating the environment file for airflow"
 repo_setup
 echo "Creating docker containers"
