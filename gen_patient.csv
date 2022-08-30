@@ -1,4 +1,4 @@
-GEN_IDNUMBER,GEN_TREAT_CENTER,GEN_REFER_CENTER,GEN_DATE_REGISTR,GEN_YEAR_BIRTH,GEN_AGE,GEN_GENDER,GEN_EDUCATION,GEN_RELATIONSHIP,GEN_WEIGHT,GEN_HEIGHT,GEN_DATE_DIAG,GEN_TUMOURSITE,GEN_RT_TREATMENT,GEN_OTH_C_RT_REIRR
+gen_idnumber,gen_treat_center,gen_refer_center,gen_date_registr,gen_year_birth,gen_age,gen_gender,gen_education,gen_relationship,gen_weight,gen_height,gen_date_diag,gen_tumoursite,gen_rt_treatment,gen_oth_c_rt_reirr
 5001,4,72,08/01/1951,1976,60,9,1,2,111,205,20/01/1956,15,5,0
 5002,3,60,29/04/1997,2010,50,1,5,4,130,173,21/01/1964,8,5,0
 5003,1,7,14/06/1961,1974,12,1,4,1,136,170,02/10/1974,7,3,1

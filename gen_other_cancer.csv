@@ -1,4 +1,4 @@
-GEN_IDNUMBER,GEN_OTHER_CANCER_ID,GEN_OTH_C_ICD,GEN_OTH_C_SITE,GEN_OTH_C_DATE,GEN_OTH_C_RT,GEN_OTHERCANCER,GEN_OTH_C_RT_REIRR
+gen_idnumber,gen_other_cancer_id,gen_oth_c_icd,gen_oth_c_site,gen_oth_c_date,gen_oth_c_rt,gen_othercancer,gen_oth_c_rt_reirr
 5001,5001,1,otherCancer,-8576,1,1,0
 5002,5002,1,otherCancer,-15496,1,1,0
 5003,5003,0,otherCancer,10000,0,1,1

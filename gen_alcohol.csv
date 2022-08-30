@@ -1,4 +1,4 @@
-GEN_IDNUMBER,GEN_ALCOHOL_ID,GEN_ALCOHOL,GEN_ALCOHOL_DAYS,GEN_ALCOHOL_GLASS
+gen_idnumber,gen_alcohol_id,gen_alcohol,gen_alcohol_days,gen_alcohol_glass
 5001,5001,1,31,0
 5002,5002,0,25,0
 5003,5003,1,0,27

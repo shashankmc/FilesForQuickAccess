@@ -1,4 +1,4 @@
-GEN_IDNUMBER,GEN_PLAN_COMPARISON_ID,GEN_PLAN_COMPARISON,GEN_PLAN_COMP_DATE,GEN_PLAN_COMP_VERSION,GEN_COMP_OUTCOME,GEN_DEC_PROTONS,GEN_REASON_PROTONS,GEN_REASON_PROT_OTHER
+gen_idnumber,gen_plan_comparison_id,gen_plan_comparison,gen_plan_comp_date,gen_plan_comp_version,gen_comp_outcome,gen_dec_protons,gen_reason_protons,gen_reason_prot_other
 5001,5001,0,29/10/1956,10,1,1,5,other
 5002,5002,0,09/07/1934,0,1,0,3,other
 5003,5003,1,25/11/1983,10,0,0,4,other
