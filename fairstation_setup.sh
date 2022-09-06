@@ -18,20 +18,22 @@ ubuntu_env_setup(){
 }
 
 redhat_env_setup(){
+	sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 	sudo yum update && sudo yum install -y yum-utils git curl wget #device-mapper-persistent-data lvm2
-	sudo yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
-	sudo yum update && sudo yum install -y docker-ce docker-ce-cli containerd.io 
-	# sudo yum install docker-ce --allowerasing # if dependency issues with podman
+	sudo yum install docker-ce --allowerasing # if dependency issues with podman
+	sudo yum install -y docker-ce-cli containerd.io 
 	sudo systemctl enable --now docker
-	systemctl status docker
+	#systemctl status docker
 	sudo usermod -aG docker $USER
-	newgrp docker
-	id $USER
+	source ~/.bash_profile
+	#newgrp docker
+	id -nG
 	docker version
 	curl -s https://api.github.com/repos/docker/compose/releases/latest | grep browser_download_url  | grep docker-compose-linux-x86_64 | cut -d '"' -f 4 | wget -qi -
 	chmod +x docker-compose-linux-x86_64
 	sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 	docker-compose version
+	rm docker-compose-linux*
 }
 
 docker_setup(){
@@ -39,30 +41,9 @@ docker_setup(){
 }
 
 repo_setup(){
-	git clone https://gitlab.com/UM-CDS/protrait/fairifier2.git
+	git clone https://gitlab.com/aiaragomes/fairifier2.git
 	cd fairifier2
-	# if additional env variables need to be added, add here 	
-	touch .env
-	printf "AIRFLOW_VAR_APPEND_CSV=0\n" >> .env
-	printf "\n" >> .env
-	printf "AIRFLOW_UID=50000\n" >> .env
-	printf "AIRFLOW_GID=0\n" >> .env
-	printf "\n" >> .env
-	printf "# R2RML\n" >> .env
-	printf "AIRFLOW_VAR_R2RML_REPO=https://github.com/jaspersnel/r2rml_tests.git\n" >> .env
-	printf "AIRFLOW_VAR_R2RML_REPO_SUBDIR=.\n" >> .env
-	printf "AIRFLOW_VAR_R2RML_DB_URL=postgresql://airflow:airflow@postgres:5432/data\n" >> .env
-	printf "AIRFLOW_VAR_R2RML_RDB_CONNSTR=jdbc:postgresql://localhost:5432/protrait\n" >> .env
-	printf "AIRFLOW_VAR_R2RML_RDB_PASSWORD=passwordhere\n" >> .env
-	printf "AIRFLOW_VAR_R2RML_RDB_USER=postgres\n" >> .env
-	printf "\n" >> .env
-	printf "# Triplestore\n" >> .env
-	printf "AIRFLOW_VAR_SPARQL_ENDPOINT=http://graphdb:7200/repositories/data\n" >> .env
-	printf "\n" >> .env
-	printf "# LibreClinica\n" >> .env
-	printf "AIRFLOW_VAR_LC_ENDPOINT=https://libreclinica.health-ri.nl/lcws_test/ws/\n" >> .env
-	printf "AIRFLOW_VAR_LC_USER=protrait_import\n" >> .env
-	printf "AIRFLOW_VAR_LC_PASSWORD=hashed_password_here" >> .env
+	cp .env.example .env
 }
 
 echo "Running the process as sudo"
